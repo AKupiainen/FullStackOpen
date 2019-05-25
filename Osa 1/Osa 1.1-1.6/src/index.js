@@ -12,14 +12,11 @@ const Part = ({part, assignments}) =>
 )
 
 const Content = ({parts}) => 
-{
-    <ul>
-        {parts.map(part => 
-        (
-            <li><Part key={part.part} part={part.name} assignments={part.assignments}/></li>
-        ))}
-    </ul>
-}
+(
+    parts.map(part => (
+        <Part key={part.part} part={part.name} assignments={part.assignments}/>
+    ))
+)
 
 const Total = ({parts}) =>
 (
